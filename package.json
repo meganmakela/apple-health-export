@@ -1,0 +1,8 @@
+{
+  "name": "health-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://www.github.com/meganmakela/health-api ",
+  "author": "meganmakela <64018716+meganmakela@users.noreply.github.com>",
+  "license": "MIT"
+}
