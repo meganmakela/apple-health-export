@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://www.github.com/meganmakela/health-api ",
   "author": "meganmakela <64018716+meganmakela@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^21.0.1"
+  },
+  "start": "vercel dev"
 }
