@@ -1,4 +1,5 @@
 {
+  "start": "vercel dev",
   "name": "health-api",
   "version": "1.0.0",
   "main": "index.js",
@@ -8,5 +9,4 @@
   "devDependencies": {
     "vercel": "^21.0.1"
   },
-  "start": "vercel dev"
-}
+};
