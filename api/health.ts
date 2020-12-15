@@ -1,5 +1,10 @@
 import { NowRequest, NowResponse } from "@now/node";
 
+const Airtable = require('airtable');
+const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
+  process.env.AIRTABLE_BASE_ID);
+const table = base(process.env.AIRTABLE_TABLE_NAME);
+
 /**
  * Format the sample to a more friendly data structure
  * @param {values: string; timestamps: string;} entry
@@ -76,7 +81,13 @@ const handler = async (
 
   // Write data to database here...
 
-  return res.status(200).json({ response: "OK" });
+  try {
+    const importedEntry = await table.create([{ entry }]);
+    return res.status(200).json({ response: "OK" });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ response: error.response.errors[0].message });
+  };
 };
 
 export default handler;
