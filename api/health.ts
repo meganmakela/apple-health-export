@@ -23,7 +23,7 @@ const formathealthSample = (entry: {
     .map((item, index) => {
       return {
         value: parseInt(item, 10),
-        timestamp: new timestamps.split("\n")[index],
+        timestamp: timestamps.split("\n")[index],
       };
     });
 
