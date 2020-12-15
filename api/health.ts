@@ -69,7 +69,7 @@ const handler = async (
   const entry = {
     heartRate: formattedHeartData,
     steps: formattedStepsData,
-    date: today.toISOString(),
+    date: today,
   };
 
   console.log(entry);

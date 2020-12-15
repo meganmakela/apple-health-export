@@ -10,5 +10,8 @@
   },
   "scripts": {
     "start": "vercel dev"
+  },
+  "dependencies": {
+    "airtable": "^0.10.1"
   }
 }
